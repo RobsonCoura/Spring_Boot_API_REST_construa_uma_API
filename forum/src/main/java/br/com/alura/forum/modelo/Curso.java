@@ -1,17 +1,20 @@
 package br.com.alura.forum.modelo;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Curso {
 
     //Atributos
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String categoria;
 
-    //Construtor com argumentos
-    public Curso(String nome, String categoria) {
-        this.nome = nome;
-        this.categoria = categoria;
-    }
 
     /*Método hashCode serve como uma "forma" do Java organizar e agrupar os objetos da lista,
      com a intenção de localizar mais rápido um determinado objeto.
