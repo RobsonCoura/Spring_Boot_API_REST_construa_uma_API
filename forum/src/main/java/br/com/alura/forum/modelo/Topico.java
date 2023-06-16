@@ -1,5 +1,7 @@
 package br.com.alura.forum.modelo;
 
+import br.com.alura.forum.enums.StatusTopico;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +13,7 @@ public class Topico {
     private String titulo;
     private String mensagem;
     private LocalDateTime dataCriacao = LocalDateTime.now();
-//    private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
+    private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
     private Usuario autor;
     private Curso curso;
     private List<Resposta> respostas = new ArrayList<>();
@@ -85,13 +87,13 @@ public class Topico {
         this.dataCriacao = dataCriacao;
     }
 
-//    public StatusTopico getStatus() {
-//        return status;
-//    }
-//
-//    public void setStatus(StatusTopico status) {
-//        this.status = status;
-//    }
+    public StatusTopico getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusTopico status) {
+        this.status = status;
+    }
 
     public Usuario getAutor() {
         return autor;

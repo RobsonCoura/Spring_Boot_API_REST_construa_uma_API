@@ -7,7 +7,7 @@ public class Resposta {
     //Atributos e Objeto
     private Long id;
     private String mensagem;
-//    private Topico topico;
+    private Topico topico;
     private LocalDateTime dataCriacao = LocalDateTime.now();
     private Usuario autor;
     private Boolean solucao = false;
@@ -58,13 +58,13 @@ public class Resposta {
         this.mensagem = mensagem;
     }
 
-//    public Topico getTopico() {
-//        return topico;
-//    }
-//
-//    public void setTopico(Topico topico) {
-//        this.topico = topico;
-//    }
+    public Topico getTopico() {
+        return topico;
+    }
+
+    public void setTopico(Topico topico) {
+        this.topico = topico;
+    }
 
     public LocalDateTime getDataCriacao() {
         return dataCriacao;
